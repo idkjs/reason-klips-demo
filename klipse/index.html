@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link rel="stylesheet" type="text/css" href="http://app.klipse.tech/css/codemirror.css">
+
+  <!-- Your custom CSS styles -->
+  <link rel="stylesheet" type="text/css" href="theme.css">
+
+  <title>Klipse Theme Example</title>
+
+  </style>
+</head>
+
+<body>
+  <!-- KLIPSE PLUGIN -->
+
+  <p>And now, we are going to <strong>klipsify</strong> this code snippet:</p>
+
+  <pre><code class="language-klipse-reason">
+    let hello (name) = "Hello " ++ name ++ "!";
+    let a = hello("World");
+  </code></pre>
+
+  <p>And now, we are going to <strong>transpile-reason-to-ocaml</strong>:</p>
+
+  <pre><code class="language-transpile-reason-to-ocaml">
+    let hello (name) = "Hello " ++ name ++ "!";
+    let a = hello("OCaml");
+  </code></pre>
+
+  <p>And now, we are going to <strong>transpile-reason-to-js-with-bucklescript</strong>:</p>
+
+  <pre><code class="language-transpile-reason">
+    let hello (name) = "Hello " ++ name ++ "!";
+    let a = hello("Bucklescript");
+  </code></pre>
+
+
+  <!-- CONFIGURE KLIPSE -->
+  <script>
+    window.klipse_settings = {
+      selector_transpile_reason_3: '.language-transpile-reason', // selector for reason transpilation snippets
+      selector_transpile_reason_3_to_ocaml: '.language-transpile-reason-to-ocaml', // selector for reason transpilation into ocaml snippets
+      selector_eval_reason_3: '.language-klipse-reason',  // selector for reason evaluation snippets
+      selector_ocaml_to_reason: '.language-klipse-ocaml-to-reason' // selector for ocaml to reason snippets
+    };
+  </script>
+  <script src="http://app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
+
+</body>
+
+</html>

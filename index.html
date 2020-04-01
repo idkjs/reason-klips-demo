@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ReasonReact Examples</title>
+  <link rel="stylesheet" type="text/css" href="http://app.klipse.tech/css/codemirror.css">
+
+  <!-- Your custom CSS styles -->
+  <link rel="stylesheet" type="text/css" href="theme.css">
+</head>
+<body>
+  <div id=root></div>
+  <script>
+    // stub a variable ReactJS checks. ReactJS assumes you're using a bundler, NodeJS or similar system that provides it the `process.env.NODE_ENV` variable.
+    window.process = {
+      env: {
+        NODE_ENV: 'development'
+      }
+    };
+  </script>
+
+
+      <title>Docs</title>
+    </head>
+    <body>
+
+
+  <!-- CONFIGURE KLIPSE -->
+  <script>
+    window.klipse_settings = {
+      selector_transpile_reason_3: '.language-transpile-reason', // selector for reason transpilation snippets
+      selector_transpile_reason_3_to_ocaml: '.language-transpile-reason-to-ocaml', // selector for reason transpilation into ocaml snippets
+      selector_eval_reason_3: '.language-klipse-reason',  // selector for reason evaluation snippets
+      selector_ocaml_to_reason: '.language-klipse-ocaml-to-reason' // selector for ocaml to reason snippets
+    };
+  </script>
+  <script src="http://app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
+  <!-- This is https://github.com/marijnh/moduleserve, the secret sauce that allows us not need to bundle things during development, and have instantaneous iteration feedback, without any hot-reloading or extra build pipeline needed. -->
+  <script src="/moduleserve/load.js" data-module="/src/Index.bs.js"></script>
+  <!-- Our little watcher. Super clean. Check it out! -->
+  <script src="/watcher.js"></script>
+</body>
+</html>
