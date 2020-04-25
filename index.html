@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>ReasonReact Examples</title>
@@ -8,8 +9,57 @@
   <!-- Your custom CSS styles -->
   <link rel="stylesheet" type="text/css" href="theme.css">
 </head>
+
 <body>
   <div id=root></div>
+  <p>And now, we are going to <strong>klipsify</strong> this code snippet:</p>
+
+  <h1>reason => run it</h1>
+  <pre><code class="language-klipse-reason">
+    let hello (name) = "Hello " ++ name ++ "!";
+    let a = hello("World");
+</code></pre>
+  <h1>reason => js</h1>
+  <pre><code class="language-transpile-reason">
+let hello (name) = "Hello " ++ name ++ "!";
+let a = hello("World");
+</code></pre>
+  <h1>reason => ocaml</h1>
+  <pre><code class="language-transpile-reason-to-ocaml">
+let hello (name) = "Hello " ++ name ++ "!";
+let a = hello("World");
+</code></pre>
+  <h1>ocaml => reason</h1>
+  <pre><code class="language-klipse-ocaml-to-reason">
+let hello (name) = "Hello " ++ name ++ "!";
+let a = hello("World");
+</code></pre>
+  <h1>reason old => run it</h1>
+  <pre><code class="language-klipse-reason">
+ 
+      let str = "1";
+      print_string str
+    
+</code></pre>
+  <h1>reason old => js</h1>
+  <pre><code class="language-transpile-reason">
+let hello (name) = "Hello " ++ name ++ "!";
+let a = hello("World");
+</code></pre>
+  <h1>reason old => ocaml</h1>
+  <pre><code class="language-transpile-reason-to-ocaml">
+let hello (name) = "Hello " ++ name ++ "!";
+let a = hello("World");
+</code></pre>
+  <h1>ocaml => reason</h1>
+  <pre><code class="language-klipse-ocaml-to-reason">
+let hello (name) = "Hello " ++ name ++ "!";
+let a = hello("World");
+</code></pre>
+  <h1>from gist => reason</h1>
+  <div class="klipse-snippet klipse-eval-reason-3"><div class="CodeMirror cm-s-default CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 5px; left: 185px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="width: 18px; pointer-events: none;"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true" style="height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 30px; min-height: 206px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style="visibility: hidden;"><div class="CodeMirror-cursor" style="left: 184px; top: 0px; height: 22px;">&nbsp;</div></div><div class="CodeMirror-code" style=""><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">/<span class="cm-operator">*</span> <span class="cm-variable">loaded</span> <span class="cm-variable">from</span> <span class="cm-variable">gist</span><span class="cm-operator">:</span> <span class="cm-variable">https</span><span class="cm-operator">:</span>//<span class="cm-variable">gist</span><span class="cm-operator">.</span><span class="cm-variable">github</span><span class="cm-operator">.</span><span class="cm-variable">com</span>/<span class="cm-variable">viebel</span>/<span class="cm-variable">c91ebea3f81bc41d3f7ab0d95e7c8ba1</span> <span class="cm-operator">*</span>/</span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">let</span> <span class="cm-keyword">rec</span> <span class="cm-variable">sigma</span> (<span class="cm-variable">f</span>, <span class="cm-variable">s</span>) <span class="cm-operator">=</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"> <span class="cm-variable">switch</span> (<span class="cm-variable">s</span>) {</span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">|</span> [] <span class="cm-operator">=&gt;</span> <span class="cm-number">0</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">|</span> [<span class="cm-variable">x</span>, <span class="cm-operator">...</span><span class="cm-variable">l</span>] <span class="cm-operator">=&gt;</span> <span class="cm-variable">f</span> (<span class="cm-variable">x</span>) <span class="cm-operator">+</span> <span class="cm-variable">sigma</span> (<span class="cm-variable">f</span>, <span class="cm-variable">l</span>)</span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"> &nbsp;  };</span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"> &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">let</span> () <span class="cm-operator">=</span> <span class="cm-variable">Js</span><span class="cm-operator">.</span><span class="cm-variable">log</span> (<span class="cm-variable">sigma</span> ((<span class="cm-keyword">fun</span> (<span class="cm-variable">x</span>) <span class="cm-operator">=&gt;</span> <span class="cm-variable">x</span> <span class="cm-operator">*</span> <span class="cm-variable">x</span>), [<span class="cm-number">1</span>, <span class="cm-number">2</span>, <span class="cm-number">3</span>])); </span></pre></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 206px;"></div><div class="CodeMirror-gutters" style="display: none; height: 236px;"></div></div></div></div>
+
+
   <script>
     // stub a variable ReactJS checks. ReactJS assumes you're using a bundler, NodeJS or similar system that provides it the `process.env.NODE_ENV` variable.
     window.process = {
@@ -20,18 +70,15 @@
   </script>
 
 
-      <title>Docs</title>
-    </head>
-    <body>
-
-
   <!-- CONFIGURE KLIPSE -->
   <script>
     window.klipse_settings = {
       selector_transpile_reason_3: '.language-transpile-reason', // selector for reason transpilation snippets
       selector_transpile_reason_3_to_ocaml: '.language-transpile-reason-to-ocaml', // selector for reason transpilation into ocaml snippets
       selector_eval_reason_3: '.language-klipse-reason',  // selector for reason evaluation snippets
-      selector_ocaml_to_reason: '.language-klipse-ocaml-to-reason' // selector for ocaml to reason snippets
+      // selector_ocaml_to_reason: '.language-klipse-ocaml-to-reason', // selector for ocaml to reason snippets
+      // selector_transpile_reason: '.language-transpile-reason', // selector for reason transpilation snippets
+      // selector_eval_reason: '.language-klipse-reason' // selector for reason evaluation snippets
     };
   </script>
   <script src="http://app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
@@ -40,4 +87,5 @@
   <!-- Our little watcher. Super clean. Check it out! -->
   <script src="/watcher.js"></script>
 </body>
+
 </html>
