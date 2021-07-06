@@ -1,11 +1,11 @@
-[@bs.module] external marked : (string, Js.t({..})) => string = "marked";
+[@bs.module] external marked: (string, Js.t({..})) => string = "marked";
 
 let componentOrNull = (condition, component) =>
-  if (condition) {component} else {ReasonReact.null};
+  if (condition) {component} else {React.null};
 
-let s = ReasonReact.string;
+let s = React.string;
 
-let ate = ReasonReact.array;
+let ate = React.array;
 
 let md = markdownString => {
   let res =
@@ -14,10 +14,10 @@ let md = markdownString => {
       {"gfm": true, "smartLists": true, "smartypants": true},
     );
   let props =
-    ReactDOMRe.props(
+    ReactDOM.domProps(
       ~dangerouslySetInnerHTML={"__html": res},
       ~className="markdown-container",
       (),
     );
-  ReactDOMRe.createElement("section", ~props, [||]);
+  ReactDOM.stringToComponent("section", props);
 };

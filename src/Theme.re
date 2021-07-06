@@ -6,7 +6,7 @@ let reasonReactBlue = "#48a9dc";
 // constructing a string
 let style = {j|
 .CodeMirror {
-    padding: 10px; 
+    padding: 10px;
     border: none !important;
 }
 
@@ -19,7 +19,7 @@ let style = {j|
   background-color: #272822;
   color: #aaaaaa;
   font-family: Montserrat, Arial, sans-serif;
-  font-style: italic; 
+  font-style: italic;
 }
 
 /* Modify the console area (i.e. the area beneath 'Output:') */
@@ -30,8 +30,8 @@ let style = {j|
 
 
 /*************** STANDARD CODEMIRROR RULES *********************
-/* 
-/* Create your own or copy and paste the ones available at 
+/*
+/* Create your own or copy and paste the ones available at
 /* http://farhadg.github.io/code-mirror-themes/)
 */
 .cm-s-default {

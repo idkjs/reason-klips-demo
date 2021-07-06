@@ -1,6 +1,6 @@
 'use strict';
 
-var React = require("react");
+var Curry = require("bs-platform/lib/js/curry.js");
 var Marked = require("marked");
 
 function componentOrNull(condition, component) {
@@ -25,17 +25,16 @@ function md(markdownString) {
         smartLists: true,
         smartypants: true
       });
-  var props = {
-    className: "markdown-container",
-    dangerouslySetInnerHTML: {
-      __html: res
-    }
-  };
-  return React.createElement("section", props);
+  return Curry._1("section", {
+              className: "markdown-container",
+              dangerouslySetInnerHTML: {
+                __html: res
+              }
+            });
 }
 
 exports.componentOrNull = componentOrNull;
 exports.s = s;
 exports.ate = ate;
 exports.md = md;
-/* react Not a pure module */
+/* marked Not a pure module */

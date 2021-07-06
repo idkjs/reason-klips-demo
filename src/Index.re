@@ -29,11 +29,12 @@
 
 // // All 4 examples.
 
-
-// ReactDOMRe.render(
+// ReactDOM.render(
 //   <KlipseDemo />,
 //   makeContainer("KlipseDemo"),
 // );
-ReactDOMRe.renderToElementWithId(
-  <KlipseDemo />,"root"
-);
+
+switch (ReactDOM.querySelector("#root")) {
+| Some(root) => ReactDOM.render(<KlipseDemo />, root)
+| None => Js.log("Coudn't find #root element to mount the React app.")
+};

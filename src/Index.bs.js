@@ -1,9 +1,15 @@
 'use strict';
 
 var React = require("react");
-var ReactDOMRe = require("reason-react/src/ReactDOMRe.js");
+var ReactDom = require("react-dom");
 var KlipseDemo$ReasonKlipsDemo = require("./KlipsDemo/KlipseDemo.bs.js");
 
-ReactDOMRe.renderToElementWithId(React.createElement(KlipseDemo$ReasonKlipsDemo.make, { }), "root");
+var root = document.querySelector("#root");
 
-/*  Not a pure module */
+if (root == null) {
+  console.log("Coudn't find #root element to mount the React app.");
+} else {
+  ReactDom.render(React.createElement(KlipseDemo$ReasonKlipsDemo.make, {}), root);
+}
+
+/* root Not a pure module */
